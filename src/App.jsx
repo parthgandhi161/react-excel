@@ -33,7 +33,7 @@ function App() {
 
   const submit = async () => {
     sheet1.forEach((element, index) => {
-      average.push({ value: (element.value + sheet2[index].value) / 2 });
+      average.push({ value: (element.value / sheet2[index].value) * 100 });
     });
 
     let wb = XLSX.utils.book_new();
